@@ -1,0 +1,3 @@
+[submodule "mpdr"]
+	path = mpdr
+	url = git@github.com:blakespangenberg/mpdr.git
