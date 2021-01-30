@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 #include "cJSON.h"
 #include "randomprime.h"
 

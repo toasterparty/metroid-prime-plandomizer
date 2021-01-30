@@ -1,7 +1,15 @@
 ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+SRC_DIR := $(ROOT_DIR)/src
 TOOLS_DIR := $(ROOT_DIR)/tools
+BUILD_DIR := $(ROOT_DIR)/build
 RANDOM_PRIME_DIR := $(ROOT_DIR)/randomprime
+
 CARGO := cd $(RANDOM_PRIME_DIR) && cargo
+
+CC := $(shell which gcc)
+
+CFLAGS := -I$(SRC_DIR)/include
+CFLAGS += -I$(SRC_DIR)/thirdparty/cJSON
 
 .PHONY: requirements submodules clean build
 
@@ -19,6 +27,14 @@ submodules :
 clean :
 	@echo "Cleaning..."
 	@$(CARGO) clean
+
+tote : $(BUILD_DIR)/tote
+
+$(BUILD_DIR) :
+	@mkdir -p $(BUILD_DIR)
+
+$(BUILD_DIR)/tote : $(BUILD_DIR)
+	$(CC) -o $(BUILD_DIR)/tote $(SRC_DIR)/tote.c $(SRC_DIR)/thirdparty/cJSON/cJSON.o $(CFLAGS)
 
 build : submodules
 	@echo "Building..."
