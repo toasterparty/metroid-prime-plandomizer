@@ -1,3 +1,6 @@
 [submodule "randomprime"]
 	path = randomprime
 	url = ../randomprime.git
+[submodule "src/thirdparty/cJSON"]
+	path = src/thirdparty/cJSON
+	url = ../../DaveGamble/cJSON.git
