@@ -8,8 +8,21 @@ CARGO := cd $(RANDOM_PRIME_DIR) && cargo
 
 CC := $(shell which gcc)
 
-CFLAGS := -I$(SRC_DIR)/include
-CFLAGS += -I$(SRC_DIR)/thirdparty/cJSON
+INC := $(SRC_DIR)/include
+INC += $(SRC_DIR)/thirdparty/cJSON
+
+INC_PARAM =$(foreach d, $(INC), -I$d)
+
+CFLAGS := $(INC_PARAM)
+
+SRC := $(SRC_DIR)/tote.c
+
+OBJ := $(SRC_DIR)/thirdparty/cJSON/cJSON.o
+
+DEPS := $(SRC_DIR)/include/randomprime.h
+DEPS += $(SRC_DIR)/thirdparty/cJSON/cJSON.h
+DEPS += $(SRC)
+DEPS += $(OBJ)
 
 .PHONY: requirements submodules clean build
 
@@ -29,15 +42,19 @@ clean :
 	@$(CARGO) clean
 	@rm -rf $(BUILD_DIR)
 	@make $(BUILD_DIR)
+	@cd $(SRC_DIR)/thirdparty/cJSON && make clean > /dev/null
+
+cjson :
+	@cd $(SRC_DIR)/thirdparty/cJSON && make all
 
 tote : $(BUILD_DIR)/tote
 
 $(BUILD_DIR) :
 	@mkdir -p $(BUILD_DIR)
 
-$(BUILD_DIR)/tote : $(BUILD_DIR)
-	$(CC) -o $(BUILD_DIR)/tote $(SRC_DIR)/tote.c $(SRC_DIR)/thirdparty/cJSON/cJSON.o $(CFLAGS)
+$(BUILD_DIR)/tote : $(BUILD_DIR) $(DEPS) cjson
+	$(CC) -o $@ $(SRC) $(OBJ) $(CFLAGS)
 
-build : submodules
+all : submodules $(BUILD_DIR)/tote
 	@echo "Building..."
 	@$(CARGO) build --release
