@@ -7,6 +7,10 @@
 
 #define DOORS_FILEPATH "doors.json"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 static size_t get_file_size(FILE* f_ptr)
 {
     assert(f_ptr);
@@ -27,7 +31,7 @@ static char* read_doors_preset(const char* doors_filepath)
     assert(doors_file != NULL && "Failed to open doors file for reading");
     
     size_t size = get_file_size(doors_file);
-    char* doors_text = malloc(size+1);
+    char* doors_text = (char*) malloc(size+1);
     assert(doors_text && "Falid to allocate memory for doors file content");
     memset(doors_text, 0, size+1);
 
@@ -52,3 +56,7 @@ int main(void)
     free(doors_preset);
     return 0;
 }
+
+#ifdef __cplusplus
+}
+#endif
