@@ -12,7 +12,7 @@ typedef void(*randomprime_callback_t)(void*, const char*);
 void randomprime_patch_iso(const char* config_json, void *cb_data, randomprime_callback_t cb);
 
 #ifdef __cplusplus
-extern "C" {
+}
 #endif
 
 #endif

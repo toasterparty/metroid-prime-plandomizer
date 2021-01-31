@@ -18,17 +18,12 @@ SRC := $(SRC_DIR)/tote.c
 
 OBJ := $(CJSON_DIR)/cJSON.o
 
-LIB_DIR := $(RANDOM_PRIME_DIR)/target/release
-LIB_DIR_PARAM := $(foreach d, $(LIB_DIR), -L$d)
+LIB := $(RANDOM_PRIME_DIR)/target/release/librandomprime.a
+LIB += -lstdc++
+LIB += -ldl
 
-LIB := randomprime
-LIB += stdc++
-LIB += dl
-LIB_PARAM := $(foreach d, $(LIB), -l$d)
-
-CFLAGS := -ggdb3 -std=c99 -pthread -shared -Wl,-export-dynamic -Wall -Wextra -Werror -pedantic
-CFLAGS += $(LIB_DIR_PARAM)
-CFLAGS += $(LIB_PARAM)
+CFLAGS := -pthread -Wl,-export-dynamic -Wall -Wextra -pedantic
+CFLAGS += $(LIB)
 CFLAGS += $(INC_PARAM)
 
 DEPS := $(SRC_DIR)/include/randomprime.h
@@ -68,7 +63,7 @@ $(BUILD_DIR) :
 	@mkdir -p $(BUILD_DIR)
 
 $(BUILD_DIR)/tote : cjson $(BUILD_DIR) $(DEPS)
-	$(CC) -o $@ $(SRC) $(OBJ) $(CFLAGS)
+	$(CXX) -o $@ $(SRC) $(OBJ) $(CFLAGS)
 
 $(RANDOM_PRIME_DIR)/target/release/librandomprime.a : randomprime
 randomprime :
