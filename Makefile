@@ -24,7 +24,9 @@ DEPS += $(SRC_DIR)/thirdparty/cJSON/cJSON.h
 DEPS += $(SRC)
 DEPS += $(OBJ)
 
-.PHONY: requirements submodules clean build
+.PHONY: requirements submodules clean build all cjson randomprime
+
+all : submodules tote randomprime
 
 requirements :
 	@sudo apt-get install cmake -y
@@ -55,6 +57,6 @@ $(BUILD_DIR) :
 $(BUILD_DIR)/tote : $(BUILD_DIR) $(DEPS) cjson
 	$(CC) -o $@ $(SRC) $(OBJ) $(CFLAGS)
 
-all : submodules $(BUILD_DIR)/tote
+randomprime : 
 	@echo "Building..."
 	@$(CARGO) build --release
