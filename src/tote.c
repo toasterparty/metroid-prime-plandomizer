@@ -49,11 +49,21 @@ static char* read_doors_preset(const char* doors_filepath)
     return doors_parsed;
 }
 
+static void randomprime_callback(void* ptr, const char* str)
+{
+    printf("randomprime_callback()\n");
+    printf("ptr - %p\n", ptr);
+    printf("str - %s\n", str);
+}
+
 int main(void)
 {
     char* doors_preset = read_doors_preset(DOORS_FILEPATH);
     printf("%s\n",doors_preset);
     free(doors_preset);
+
+    randomprime_patch_iso(doors_preset, NULL, randomprime_callback);
+
     return 0;
 }
 

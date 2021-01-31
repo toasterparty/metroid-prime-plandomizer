@@ -26,7 +26,7 @@ LIB += stdc++
 LIB += dl
 LIB_PARAM := $(foreach d, $(LIB), -l$d)
 
-CFLAGS := -pthread -shared -Wl,-export-dynamic
+CFLAGS := -ggdb3 -std=c99 -pthread -shared -Wl,-export-dynamic -Wall -Wextra -Werror -pedantic
 CFLAGS += $(LIB_DIR_PARAM)
 CFLAGS += $(LIB_PARAM)
 CFLAGS += $(INC_PARAM)
@@ -39,7 +39,7 @@ DEPS += $(RANDOM_PRIME_DIR)/target/release/librandomprime.a
 
 .PHONY: requirements submodules clean build all cjson randomprime
 
-all : submodules tote
+all : | submodules randomprime tote
 
 requirements :
 	@sudo apt-get install cmake -y
@@ -70,6 +70,10 @@ $(BUILD_DIR) :
 $(BUILD_DIR)/tote : cjson $(BUILD_DIR) $(DEPS)
 	$(CC) -o $@ $(SRC) $(OBJ) $(CFLAGS)
 
-$(RANDOM_PRIME_DIR)/target/release/librandomprime.a : 
+$(RANDOM_PRIME_DIR)/target/release/librandomprime.a : randomprime
+randomprime :
 	@echo "Building $@..."
 	@$(CARGO) build --release
+
+run :
+	@cd $(BUILD_DIR) && cp $(ROOT_DIR)/world_layout/doors.json . && ./tote
