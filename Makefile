@@ -32,9 +32,9 @@ DEPS += $(SRC)
 DEPS += $(OBJ)
 DEPS += $(RANDOM_PRIME_DIR)/target/release/librandomprime.a
 
-.PHONY: requirements submodules clean build all cjson randomprime
+.PHONY: requirements submodules clean build all cjson randomprime_debug randomprime_release run run_tote run_debug run_release
 
-all : | submodules randomprime tote
+all : | submodules randomprime_debug
 
 requirements :
 	@sudo apt-get install cmake -y
@@ -65,10 +65,21 @@ $(BUILD_DIR) :
 $(BUILD_DIR)/tote : cjson $(BUILD_DIR) $(DEPS)
 	$(CXX) -o $@ $(SRC) $(OBJ) $(CFLAGS)
 
-$(RANDOM_PRIME_DIR)/target/release/librandomprime.a : randomprime
-randomprime :
+$(RANDOM_PRIME_DIR)/target/debug/librandomprime.a : randomprime_debug
+$(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher : randomprime_debug
+randomprime_debug :
+	@echo "Building $@..."
+	@$(CARGO) build
+
+$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher : randomprime_release
+$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher : randomprime_debug
+randomprime_release :
 	@echo "Building $@..."
 	@$(CARGO) build --release
 
-run :
+run_tote :
 	@cd $(BUILD_DIR) && cp $(ROOT_DIR)/world_layout/doors.json . && ./tote
+
+run : run_debug
+run_debug : $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher
+	@RUST_BACKTRACE=1 $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors-debug.json
