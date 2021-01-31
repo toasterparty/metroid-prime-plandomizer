@@ -1,4 +1,6 @@
 {
+    "input_iso": "prime.iso",
+    "output_iso": "prime_out.iso",
     "mpdrp_version": 3,
     "patch_settings": {
         "enable_one_way_doors":false,
@@ -15,11 +17,11 @@
     "seed":555,
     "starting_pickups":1,
     "door_weights": {
-        "chozo_ruins":[0,0,0,0],
-        "magmoor_caverns":[0,0,0,0],
-        "phazon_mines":[0,0,0,0],
-        "phendrana_drifts":[0,0,0,0],
-        "tallon_overworld":[0,0,0,0]
+        "chozo_ruins":[25,25,25,25],
+        "magmoor_caverns":[25,25,25,25],
+        "phazon_mines":[25,25,25,25],
+        "phendrana_drifts":[25,25,25,25],
+        "tallon_overworld":[25,25,25,25]
     },
     "excluded_doors": [
         {
