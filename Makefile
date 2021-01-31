@@ -27,6 +27,8 @@ submodules :
 clean :
 	@echo "Cleaning..."
 	@$(CARGO) clean
+	@rm -rf $(BUILD_DIR)
+	@make $(BUILD_DIR)
 
 tote : $(BUILD_DIR)/tote
 
