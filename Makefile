@@ -82,4 +82,5 @@ run_tote :
 
 run : run_debug
 run_debug : $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher
+	@echo "Running patcher cli..."
 	@RUST_BACKTRACE=1 $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors-debug.json
