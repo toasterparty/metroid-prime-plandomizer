@@ -34,7 +34,7 @@ DEPS += $(RANDOM_PRIME_DIR)/target/release/librandomprime.a
 
 .PHONY: requirements submodules clean build all cjson randomprime_debug randomprime_release run run_tote run_debug run_release
 
-all : | submodules randomprime_debug
+all : | submodules randomprime_debug randomprime_release tote
 
 requirements :
 	@sudo apt-get install cmake -y
@@ -52,6 +52,7 @@ clean :
 	@$(CARGO) clean
 	@rm -rf $(BUILD_DIR)
 	@make $(BUILD_DIR)
+	@rm -f $(ROOT_DIR)/prime_out.iso
 	@cd $(CJSON_DIR) && make clean > /dev/null
 
 cjson :
@@ -71,8 +72,8 @@ randomprime_debug :
 	@echo "Building $@..."
 	@$(CARGO) build
 
+$(RANDOM_PRIME_DIR)/target/release/librandomprime.a : randomprime_release
 $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher : randomprime_release
-$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher : randomprime_debug
 randomprime_release :
 	@echo "Building $@..."
 	@$(CARGO) build --release
@@ -80,7 +81,10 @@ randomprime_release :
 run_tote :
 	@cd $(BUILD_DIR) && cp $(ROOT_DIR)/world_layout/doors.json . && ./tote
 
-run : run_debug
 run_debug : $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher
-	@echo "Running patcher cli..."
+	@echo "Running patcher cli (debug)..."
 	@RUST_BACKTRACE=1 $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors-debug.json
+
+run_release : $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher
+	@echo "Running patcher cli..."
+	@RUST_BACKTRACE=1 $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors.json
