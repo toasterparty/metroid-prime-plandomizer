@@ -1,5 +1,5 @@
 [submodule "randomprime"]
-	path = randomprime
+	path = randomprime-mpdr
 	url = ../randomprime.git
 [submodule "src/thirdparty/cJSON"]
 	path = src/thirdparty/cJSON
