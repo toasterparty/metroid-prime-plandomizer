@@ -4,8 +4,10 @@ TOOLS_DIR := $(ROOT_DIR)/tools
 BUILD_DIR := $(ROOT_DIR)/build
 CJSON_DIR := $(ROOT_DIR)/src/thirdparty/cJSON
 RANDOM_PRIME_MPDR_DIR := $(ROOT_DIR)/randomprime-mpdr
+RANDOM_PRIME_DIR := $(ROOT_DIR)/randomprime
 
-CARGO := cd $(RANDOM_PRIME_MPDR_DIR) && cargo
+CARGO_MPDR := cd $(RANDOM_PRIME_MPDR_DIR) && cargo
+CARGO := cd $(RANDOM_PRIME_DIR) && cargo
 
 CC := $(shell which gcc)
 CXX := $(shell which c++)
@@ -32,9 +34,9 @@ DEPS += $(SRC)
 DEPS += $(OBJ)
 DEPS += $(RANDOM_PRIME_MPDR_DIR)/target/release/librandomprime.a
 
-.PHONY: requirements submodules clean build all cjson randomprime_mpdr_debug randomprime_mpdr_release run run_tote run_debug run_release
+.PHONY: requirements submodules clean build all cjson randomprime_mpdr_debug randomprime_mpdr_release randomprime_debug randomprime_release run run_tote run_debug run_release
 
-all : | submodules randomprime_mpdr_debug randomprime_mpdr_release tote
+all : | submodules randomprime_mpdr_debug randomprime_mpdr_release randomprime_debug randomprime_release tote
 
 requirements :
 	@sudo apt-get install cmake -y
@@ -70,11 +72,23 @@ $(RANDOM_PRIME_MPDR_DIR)/target/debug/librandomprime.a : randomprime_mpdr_debug
 $(RANDOM_PRIME_MPDR_DIR)/target/debug/randomprime_patcher : randomprime_mpdr_debug
 randomprime_mpdr_debug :
 	@echo "Building $@..."
-	@$(CARGO) build
+	@$(CARGO_MPDR) build
 
 $(RANDOM_PRIME_MPDR_DIR)/target/release/librandomprime.a : randomprime_mpdr_release
 $(RANDOM_PRIME_MPDR_DIR)/target/release/randomprime_patcher : randomprime_mpdr_release
 randomprime_mpdr_release :
+	@echo "Building $@..."
+	@$(CARGO_MPDR) build --release
+
+$(RANDOM_PRIME_DIR)/target/debug/librandomprime.a : randomprime_debug
+$(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher : randomprime_debug
+randomprime_debug :
+	@echo "Building $@..."
+	@$(CARGO) build
+
+$(RANDOM_PRIME_DIR)/target/release/librandomprime.a : randomprime_release
+$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher : randomprime_release
+randomprime_release :
 	@echo "Building $@..."
 	@$(CARGO) build --release
 
