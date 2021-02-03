@@ -1,6 +1,9 @@
 [submodule "randomprime"]
+	path = randomprime
+	url = ../../aprilwade/randomprime.git
+[submodule "randomprime-mpdr"]
 	path = randomprime-mpdr
-	url = ../randomprime.git
+	url = ../../blakespangenberg/randomprime.git
 [submodule "src/thirdparty/cJSON"]
 	path = src/thirdparty/cJSON
 	url = ../../DaveGamble/cJSON.git
