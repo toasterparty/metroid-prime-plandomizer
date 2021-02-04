@@ -3,10 +3,8 @@ SRC_DIR := $(ROOT_DIR)/src
 TOOLS_DIR := $(ROOT_DIR)/tools
 BUILD_DIR := $(ROOT_DIR)/build
 CJSON_DIR := $(ROOT_DIR)/src/thirdparty/cJSON
-RANDOM_PRIME_MPDR_DIR := $(ROOT_DIR)/randomprime-mpdr
-RANDOM_PRIME_DIR := $(ROOT_DIR)/randomprime
+RANDOM_PRIME_DIR := $(ROOT_DIR)/randomprime-mpdr
 
-CARGO_MPDR := cd $(RANDOM_PRIME_MPDR_DIR) && cargo
 CARGO := cd $(RANDOM_PRIME_DIR) && cargo
 
 CC := $(shell which gcc)
@@ -20,7 +18,7 @@ SRC := $(SRC_DIR)/tote.c
 
 OBJ := $(CJSON_DIR)/cJSON.o
 
-LIB := $(RANDOM_PRIME_MPDR_DIR)/target/release/librandomprime.a
+LIB := $(RANDOM_PRIME_DIR)/target/release/librandomprime.a
 LIB += -lstdc++
 LIB += -ldl
 
@@ -32,11 +30,11 @@ DEPS := $(SRC_DIR)/include/randomprime.h
 DEPS += $(CJSON_DIR)/cJSON.h
 DEPS += $(SRC)
 DEPS += $(OBJ)
-DEPS += $(RANDOM_PRIME_MPDR_DIR)/target/release/librandomprime.a
+DEPS += $(RANDOM_PRIME_DIR)/target/release/librandomprime.a
 
-.PHONY: requirements submodules clean build all cjson randomprime_mpdr_debug randomprime_mpdr_release randomprime_debug randomprime_release run run_tote run_debug run_release
+.PHONY: requirements submodules clean build all cjson randomprime_debug randomprime_release run run_tote run_debug run_release
 
-all : | submodules randomprime_mpdr_debug randomprime_mpdr_release randomprime_debug randomprime_release tote
+all : | submodules randomprime_debug randomprime_release tote
 
 requirements :
 	@sudo apt-get install cmake -y
@@ -68,18 +66,6 @@ $(BUILD_DIR) :
 $(BUILD_DIR)/tote : cjson $(BUILD_DIR) $(DEPS)
 	$(CXX) -o $@ $(SRC) $(OBJ) $(CFLAGS)
 
-$(RANDOM_PRIME_MPDR_DIR)/target/debug/librandomprime.a : randomprime_mpdr_debug
-$(RANDOM_PRIME_MPDR_DIR)/target/debug/randomprime_patcher : randomprime_mpdr_debug
-randomprime_mpdr_debug :
-	@echo "Building $@..."
-	@$(CARGO_MPDR) build
-
-$(RANDOM_PRIME_MPDR_DIR)/target/release/librandomprime.a : randomprime_mpdr_release
-$(RANDOM_PRIME_MPDR_DIR)/target/release/randomprime_patcher : randomprime_mpdr_release
-randomprime_mpdr_release :
-	@echo "Building $@..."
-	@$(CARGO_MPDR) build --release
-
 $(RANDOM_PRIME_DIR)/target/debug/librandomprime.a : randomprime_debug
 $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher : randomprime_debug
 randomprime_debug :
@@ -93,12 +79,13 @@ randomprime_release :
 	@$(CARGO) build --release
 
 run_tote :
-	@cd $(BUILD_DIR) && cp $(ROOT_DIR)/world_layout/doors.json . && ./tote
+	@echo "Running tote binary..."
+	@cd $(BUILD_DIR) && cp $(ROOT_DIR)/world_layout/doors.json . && cp -n $(ROOT_DIR)/prime.iso . && ./tote
 
-run_debug : $(RANDOM_PRIME_MPDR_DIR)/target/debug/randomprime_patcher
+run_debug : $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher
 	@echo "Running patcher cli (debug)..."
-	@RUST_BACKTRACE=1 $(RANDOM_PRIME_MPDR_DIR)/target/debug/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors-debug.json
+	@RUST_BACKTRACE=1 $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors-debug.json
 
-run_release : $(RANDOM_PRIME_MPDR_DIR)/target/release/randomprime_patcher
+run_release : $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher
 	@echo "Running patcher cli..."
-	@RUST_BACKTRACE=1 $(RANDOM_PRIME_MPDR_DIR)/target/release/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors.json
+	@$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors.json
