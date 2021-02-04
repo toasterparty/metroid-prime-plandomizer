@@ -80,12 +80,12 @@ randomprime_release :
 
 run_tote :
 	@echo "Running tote binary..."
-	@cd $(BUILD_DIR) && cp $(ROOT_DIR)/world_layout/doors.json . && cp -n $(ROOT_DIR)/prime.iso . && ./tote
+	@cd $(BUILD_DIR) && cp $(ROOT_DIR)/world_layout.json . && cp -n $(ROOT_DIR)/prime.iso . && ./tote
 
 run_debug : $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher
 	@echo "Running patcher cli (debug)..."
-	@RUST_BACKTRACE=1 $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors-debug.json
+	@RUST_BACKTRACE=1 $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher --profile $(ROOT_DIR)/world_layout-debug.json
 
 run_release : $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher
 	@echo "Running patcher cli..."
-	@$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher --profile $(ROOT_DIR)/world_layout/doors.json
+	@$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher --profile $(ROOT_DIR)/world_layout.json
