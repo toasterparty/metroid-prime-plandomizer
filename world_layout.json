@@ -9,10 +9,10 @@
         "powerbomb_lockpick":false,
         "skip_crater":false,
         "skip_frigate":true,
-        "skip_hudmemos":false,
-        "stagger_suit_damage":false,
+        "skip_hudmemos":true,
+        "stagger_suit_damage":true,
         "trilogy_iso":"",
-        "varia_heat_protection":false
+        "varia_heat_protection":true
     },
     "seed":555,
     "starting_pickups":1,
