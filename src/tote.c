@@ -5,7 +5,7 @@
 #include "cJSON.h"
 #include "randomprime.h"
 
-#define DOORS_FILEPATH "doors.json"
+#define DOORS_FILEPATH "world_layout.json"
 
 #ifdef __cplusplus
 extern "C" {
