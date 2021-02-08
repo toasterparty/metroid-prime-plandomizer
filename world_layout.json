@@ -23,7 +23,7 @@
         "phendrana_drifts":[25,25,25,25],
         "tallon_overworld":[25,25,25,25]
     },
-    "layout_string":"9vhFO4QqjwhNM3la.YABTT90R5NlQrBZANOmr_QFdGIekXkegbyiYTkUYeV9fGXuj4PRn--UlB0bTHWRqlrNXOMv2_QX7-fLn7iizjAS",
+    "layout_string":"ygOJmIW3JKVSCwmD.sAvpmM7dwJ_PNWvQdPOE1_56p7OHewMmMIWRYmHyoKLzFQsiiVSIawWKTwdTtsxnBWSskev3A4YL8gotF5mXWEi",
     "excluded_doors": [
         {
             "Alcove":["blue"],
@@ -60,7 +60,7 @@
             "Temple Lobby":["blue","blue"],
             "Temple Security Station":["blue","blue"],
             "Transport Tunnel A":["blue","blue"],
-            "Transport Tunnel B":["blue","red"],
+            "Transport Tunnel B":["blue","blue"],
             "Transport Tunnel C":["blue","blue"],
             "Transport Tunnel D":["blue","blue"],
             "Transport Tunnel E":["blue","blue"],
