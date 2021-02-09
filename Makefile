@@ -1,6 +1,6 @@
 ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 TOOLS_DIR := $(ROOT_DIR)/tools
-RANDOM_PRIME_DIR := $(ROOT_DIR)/randomprime-mpdr
+RANDOM_PRIME_DIR := $(ROOT_DIR)/randomprime
 
 CARGO := cd $(RANDOM_PRIME_DIR) && cargo
 
