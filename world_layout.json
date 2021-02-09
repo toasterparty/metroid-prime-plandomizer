@@ -23,7 +23,7 @@
         "phendrana_drifts":[25,25,25,25],
         "tallon_overworld":[25,25,25,25]
     },
-    "layout_string":"z4LMIYyp2naiTqkc.sAvpmM7dwJ_PNWvQdPOE1_56p7OHewMmMIWRYmHyoKLzFQsiiVSIawWKTwdTtsxnBWSskev3A4YL8gotF5mXWEi",
+    "layout_string":"z4LMIYyp2naiTqkc.oA0oj7U3xSdR7nOUdLLR1_s-4ubDfrJjJYWEMzDmoaa2BEpiiHGIe7FaV7dVp50zQFGphP03W5IO5k98WszXFBI",
     "excluded_doors": [
         {
             "Alcove":["blue"],
@@ -118,7 +118,7 @@
             "Sun Tower Access":["red","red"],
             "Sunchamber":["red","white"],
             "Sunchamber Access":["white","white"],
-            "Sunchamber Lobby":["red","white"],
+            "Sunchamber Lobby":["white","white"],
             "Totem Access":["blue","blue"],
             "Tower Chamber":["blue"],
             "Tower of Light":["blue","blue"],
