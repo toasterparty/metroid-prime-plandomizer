@@ -1,5 +1,8 @@
 @echo off
-cd ../../
+cd ../../randomprime
+cargo build --release
+cd ..
+echo Packaging release for windows...
 if exist release rmdir /Q /S release
 mkdir release
 cd release
