@@ -2,18 +2,6 @@
     "input_iso": "prime.iso",
     "output_iso": "prime_out.iso",
     "mpdrp_version": 3,
-    "patch_settings": {
-        "enable_one_way_doors":false,
-        "fix_flaaghra_music":false,
-        "patch_map":true,
-        "powerbomb_lockpick":false,
-        "skip_crater":false,
-        "skip_frigate":true,
-        "skip_hudmemos":true,
-        "stagger_suit_damage":true,
-        "trilogy_iso":"",
-        "varia_heat_protection":true
-    },
     "enable_one_way_doors":false,
     "fix_flaaghra_music":false,
     "patch_map":true,
@@ -26,13 +14,6 @@
     "varia_heat_protection":true,
     "seed":555,
     "starting_pickups":1,
-    "door_weights": {
-        "chozo_ruins":[25,25,25,25],
-        "magmoor_caverns":[25,25,25,25],
-        "phazon_mines":[25,25,25,25],
-        "phendrana_drifts":[25,25,25,25],
-        "tallon_overworld":[25,25,25,25]
-    },
     "weights": {
         "chozo_ruins":[25,25,25,25],
         "magmoor_caverns":[25,25,25,25],

@@ -20,15 +20,15 @@ I didn't implement any of the ISO patching aspects of this project (you can than
 5. Load `prime_out.iso` into Dolphin or your Wii. You are ready to play!
 
 # How to Make a Plando
-1. Make a copy of `/plandos/_template/world_layout.json` and open in a text editor. This file contains 
-2. Set your `"patch_settings"` as desired by changing the options to either `true` or `false`
+1. Make a copy of `/plandos/_template/world_layout.json` and open in a text editor. This file contains a preset for all vanilla item locations, elevator destinations and door colors.
+2. Set your patch settings as desired by changing the options to either `true` or `false`
 3. Under `"excluded_doors"`, you will see all of the rooms names in the games. Set each door's colors in each room as desired by changing each of the options to any of the following:
 - `"blue"` - Any Beam
 - `"purple"` - Wave Beam
 - `"white"` - Ice Beam
 - `"red"` - Plasma Beam
 - `"default"` - The door will be unpatched (remain vanilla color for that location)
-- `"random"` - The door's color will be randomly chosen using the provided `"seed"` value and the provided `"door_weights"`.
+- `"random"` - The door's color will be randomly chosen using the provided `"seed"` value and the provided `"weights"`.
 
 Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door is, use the map provided with [mpdr here](https://github.com/YonicDev/mpdr/releases).
 
