@@ -1,5 +1,7 @@
 *NOTE: View this file with a markdown viewer (e.g. on github) to avoid spoilers*
 
+**Author:** toasterparty
+
 # Trial of the Elders
 This seed is a proof-of-concept for my the plandomizer. My goal when designing this seed was to create a route that a) Requires tricks/skips that are rarely seen in normal randomizer runs and b) maintain a high trick to gameplay ratio. As a result the seed is quite difficult, requiring a different trick every minute or so. I imagine this seed would be interesting to speedrun, as it comes off as quite the gauntlet.
 
