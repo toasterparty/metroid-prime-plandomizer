@@ -60,4 +60,4 @@ release : $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher
 	@cp -r $(ROOT_DIR)/plandos $(RELEASE_DIR_TEMP)
 	@cp $(TOOLS_DIR)/patch.sh $(RELEASE_DIR_TEMP)
 	@cp $(ROOT_DIR)/README.md $(RELEASE_DIR_TEMP)
-	@cd $(RELEASE_DIR) && tar -czf metroid-prime-plandomizer.tar.gz metroid-prime-plandomizer
+	@cd $(RELEASE_DIR) && tar -czf metroid-prime-plandomizer-vX.X-linux.tar.gz metroid-prime-plandomizer

@@ -2,7 +2,7 @@
 
 This is a collection of tools needed to make and play plandos for Metroid Prime. What is a plando you ask? It's a portemanteau of "planned" and "randomizer", or a non-vanilla item/elevator/door configuration to be played through using sequence-breaks. It's also technically an oxymoron.
 
-Designing seeds instead of using randomly chosen ones allows for finely tuned difficulty, reduces back-tracking and can often provide gameplay experiences you wouldn't ever encounter in a logic-based randomizer. As people make plandos, I'll add them to the repository under the `/plandos` directory.
+Designing seeds instead of using randomly chosen ones allows for finely tuned difficulty, reduces back-tracking and can often provide gameplay experiences you wouldn't ever natrually encounter in a logic-based randomizer. As people make plandos, I'll add them to the repository under the `/plandos` directory.
 
 I didn't implement any of the ISO patching aspects of this project (you can thank Syncathetic and Yonic for that). I just made all the tools play nicely together and proved it works.
 
@@ -13,11 +13,11 @@ I didn't implement any of the ISO patching aspects of this project (you can than
 - All the randomizer bells and whistles you're used to (frigate skip, item pickup message skip, 0-12 required artifacts etc...)
 
 # How to Play a Plando
-1. Go to the "releases" tab on the right and download the latest version for your platform and extract the contents onto your PC.
-2. Copy your unmodified Metroid Prime ROM into the root directory and name it `prime.iso`.
-3. Copy the `world_layout.json` file of the plando you wish to play into the root directory.
-4. Run `plandomizer.exe` (just `plandomizer` on linux) and wait for patching to complete.
-5. Load `prime_out.iso` into Dolphin or your Wii. You are ready to play!
+1. Go to the "releases" tab on the right and download the latest version for your platform and extract the contents onto your PC
+2. Copy your unmodified Metroid Prime ROM into the root directory and name it `prime.iso`
+3. Copy the `world_layout.json` file of the plando you wish to play into the root directory
+4. Run `patch.bat` (or `patch.sh` on linux) and wait for patching to complete
+5. Load `prime_out.iso` into your Dolphin, Wii, TI-84 etc. You are ready to play!
 
 # How to Make a Plando
 1. Make a copy of `/plandos/_template/world_layout.json` and open in a text editor. This file contains a preset for all vanilla item locations, elevator destinations and door colors.
