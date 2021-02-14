@@ -1,6 +1,6 @@
 @echo off
 cd ../../randomprime
-cargo build --release
+cargo build
 cd ..
 echo Packaging release for windows...
 if exist release rmdir /Q /S release
@@ -10,7 +10,7 @@ mkdir metroid-prime-plandomizer
 cd metroid-prime-plandomizer
 mkdir plandos
 cd ..\..
-copy randomprime\target\release\randomprime_patcher.exe release\metroid-prime-plandomizer\plandomizer_patcher.exe /Y
+copy randomprime\target\debug\randomprime_patcher.exe release\metroid-prime-plandomizer\plandomizer_patcher.exe /Y
 copy README.md release\metroid-prime-plandomizer /Y
 copy tools\win\patch.bat release\metroid-prime-plandomizer  /Y
 xcopy plandos release\metroid-prime-plandomizer\plandos /Y /E

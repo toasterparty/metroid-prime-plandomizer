@@ -51,12 +51,12 @@ run_release : $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher
 	@$(RANDOM_PRIME_DIR)/target/release/randomprime_patcher --profile $(ROOT_DIR)/world_layout.json
 
 RELEASE_DIR_TEMP := $(RELEASE_DIR)/metroid-prime-plandomizer
-release : $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher
+release : $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher
 	@echo "Packaging release for Unix..."
 	@rm -rf $(RELEASE_DIR)
 	@mkdir -p $(RELEASE_DIR)
 	@mkdir -p $(RELEASE_DIR_TEMP)
-	@cp $(RANDOM_PRIME_DIR)/target/release/randomprime_patcher $(RELEASE_DIR_TEMP)/plandomizer_patcher
+	@cp $(RANDOM_PRIME_DIR)/target/debug/randomprime_patcher $(RELEASE_DIR_TEMP)/plandomizer_patcher
 	@cp -r $(ROOT_DIR)/plandos $(RELEASE_DIR_TEMP)
 	@cp $(TOOLS_DIR)/patch.sh $(RELEASE_DIR_TEMP)
 	@cp $(ROOT_DIR)/README.md $(RELEASE_DIR_TEMP)

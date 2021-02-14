@@ -11,4 +11,5 @@ if not exist prime.iso (
     exit
 )
 
-plandomizer_patcher.exe --profile world_layout.json
+cmd /C "set RUST_BACKTRACE=1 && plandomizer_patcher.exe --profile world_layout.json"
+pause

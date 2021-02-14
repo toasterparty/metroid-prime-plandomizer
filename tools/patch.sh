@@ -12,4 +12,4 @@ if test ! -f "$ISO_FILE"; then
     echo "Error: $ISO_FILE could not be found!" && exit 1
 fi
 
-$SCRIPT_DIR/plandomizer_patcher --profile $SCRIPT_DIR/world_layout.json
+RUST_BACKTRACE=1 $SCRIPT_DIR/plandomizer_patcher --profile $SCRIPT_DIR/world_layout.json

@@ -1,4 +1,4 @@
 @echo off
 cd ../../randomprime
-cargo build --release
+cargo build
 pause
