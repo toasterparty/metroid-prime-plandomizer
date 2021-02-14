@@ -1,7 +1,7 @@
 ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 TOOLS_DIR := $(ROOT_DIR)/tools
 RANDOM_PRIME_DIR := $(ROOT_DIR)/randomprime
-RELEASE_DIR := $(ROOT_DIR)/release
+RELEASE_DIR := $(ROOT_DIR)/release/lin
 
 CARGO := cd $(RANDOM_PRIME_DIR) && cargo
 
