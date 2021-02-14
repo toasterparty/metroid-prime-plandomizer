@@ -15,7 +15,9 @@
         "skip_hudmemos":true,
         "obfuscate_items":false,
         "stagger_suit_damage":false,
-        "varia_heat_protection":false
+        "varia_heat_protection":false,
+        "artifact_hints":"all",
+        "auto_enabled_elevators":false
     },
     "door_weights": {
         "chozo_ruins":[25,25,25,25],
