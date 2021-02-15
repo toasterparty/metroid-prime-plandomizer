@@ -5,6 +5,8 @@ RELEASE_DIR := $(ROOT_DIR)/release/lin
 
 CARGO := cd $(RANDOM_PRIME_DIR) && cargo
 
+EXPECT := $(ROOT_DIR)/tools/expect.sh
+
 ifeq ($(OS),Windows_NT) # is Windows_NT on XP, 2000, 7, Vista, 10...
     detected_OS := Windows
 else
@@ -20,7 +22,7 @@ requirements :
 	@sudo apt-get install expect -y
 	@sudo apt-get install g++-powerpc-linux-gnu -y
 	@curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-	@$(ROOT_DIR)/tools/expect.sh "source $(HOME)/.cargo/env && exit"
+	@$(EXPECT) "source $(HOME)/.cargo/env"
 	@rustup target add --toolchain stable powerpc-unknown-linux-gnu
 
 submodules :
