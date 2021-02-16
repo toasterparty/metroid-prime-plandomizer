@@ -71,12 +71,14 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 1048594
 ```
 
-And so you would use `"starting_pickups":1048594`. Note that this means you start with 9 *missiles* not *9x5 missiles missiles*.
+...and so you would use `"starting_pickups":1048594`. Note that this means the player literally start with *9/9 missiles* not *9 missile packs*.
 
 3. Set your `patch_settings` as desired. Most are self-explainitory booleans (`true`/`false`), but here's some notable ones:
 - `skip_hudmemos` - set to `true` to skip the message that pops up when you pick up an item.
 - `enable_one_way_doors` - set to `true` if you want to be able to get to vault from the main plaza ledge
 - `artifact_hints` - `"all"` means the artifact temple will show hints for all artifacts in play from the beggining. `none` means that you never get any hints. `"default"` means that it works like it does in the vanilla game.
+- `varia_heat_protection` - Set to `true` to make it so that only varia gives heat protection. Set to `false` for vanilla behavior (all 3 suits give heat protection).
+- `powerbomb_lockpick` - Set to `true` to make all doors vulnerable to power bombs.
 
 4. Under `"excluded_doors"`, you will see all of the rooms names in the games. Set each door's colors in each room as desired by changing each of the options to any of the following:
 - `"blue"` - Any Beam
@@ -88,7 +90,10 @@ And so you would use `"starting_pickups":1048594`. Note that this means you star
 
 Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door is, use the map provided with [mpdr here](https://github.com/YonicDev/mpdr/releases).
 
-5. Set the item layout, elevator layout and starting room by providing a custom `"layout_string"`. The best way to make a layout string is using [Syncathetic's web tool](https://aprilwade.github.io/randomprime/editor.html). Note that you can paste in an existing layout string to parse and edit it, as opposed to having to start from scratch each time you open the web page.
+5. Set the item layout, elevator layout and starting room by providing a custom `"layout_string"`. The best way to make a layout string is using [Syncathetic's web tool](https://aprilwade.github.io/randomprime/editor.html). Note that you can paste in an existing layout string to parse and edit it, as opposed to having to start from scratch each time you open the web page. Note that you can place as many artifacts into the world as you would like, including 0. The artifact temple will open when no artifacts remain to be collected.
+
+# Known Issues
+- Doors that connect rooms vertically (like under the statue in Hall of the Elders) cannot be changed from their default color.
 
 # Build
 
@@ -109,9 +114,6 @@ make randomizer_release
 to build.
 
 If that doesn't work, see the `randomprime` build instruction for more details.
-
-# Known Issues
-- Doors that connect rooms vertically (like under the statue in Hall of the Elders) cannot be changed from their default color.
 
 # Questions
 You can find me on various Metroid Prime Discord servers as toasterparty#9244
