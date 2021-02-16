@@ -2,13 +2,13 @@
 
 **Author:** Author Name
 
-# Trial of the Elders
+# Plando Name
 <description>
 
 # Features
 - 
 
-# Required Techniques
+# Techniques
 
 ## Required
 - 

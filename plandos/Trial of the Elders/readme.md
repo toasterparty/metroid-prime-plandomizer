@@ -14,7 +14,7 @@ This seed is a proof-of-concept for my the plandomizer. My goal when designing t
 - 1 artifact instead of 12
 - No backtracking required! (except for the first 5 items or so)
 
-# Required Techniques
+# Techniques
 
 ## Required
 - Exploit Standable Terrain
