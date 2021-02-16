@@ -88,7 +88,7 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 - `"default"` - The door will be unpatched (remain vanilla color for that location)
 - `"random"` - The door's color will be randomly chosen using the provided `"seed"` value and the provided `"door_weights"`.
 
-Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door is, use the map provided with [mpdr here](https://github.com/YonicDev/mpdr/releases).
+Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door use the annotated game maps provided [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/tree/main/maps), or in the `maps` directory. For example if a room's doors are `["blue","white","red"]`, then door:0 will be blue, door:1 will be white and door:2 would be red on the map.
 
 5. Set the item layout, elevator layout and starting room by providing a custom `"layout_string"`. The best way to make a layout string is using [Syncathetic's web tool](https://aprilwade.github.io/randomprime/editor.html). Note that you can paste in an existing layout string to parse and edit it, as opposed to having to start from scratch each time you open the web page. Note that you can place as many artifacts into the world as you would like, including 0. The artifact temple will open when no artifacts remain to be collected.
 
