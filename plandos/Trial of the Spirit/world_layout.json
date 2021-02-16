@@ -9,7 +9,7 @@
         "fix_flaaghra_music":false,
         "trilogy_iso":"",
         "patch_map":true,
-        "powerbomb_lockpick":true,
+        "powerbomb_lockpick":false,
         "skip_crater":true,
         "skip_frigate":true,
         "skip_hudmemos":true,
