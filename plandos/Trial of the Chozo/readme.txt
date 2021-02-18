@@ -7,4 +7,5 @@ To play this Plandomized Metroid Prime seed, please bear the following:
 - There are no visor requirements
 - Prepare yourself for an unconvential and TOTALLY intended hell run of sorts...
 
+
 Any queries or issues found, ping TheGingerChris or Alexis_Nightfire on the randomizer discord!

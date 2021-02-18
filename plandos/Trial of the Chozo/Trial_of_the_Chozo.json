@@ -26,7 +26,7 @@
         "phendrana_drifts":[25,25,25,25],
         "tallon_overworld":[25,25,25,25]
     },
-    "layout_string":"gcJMqJVMu5YAuM49.Yf1QvrNSMFTeuExGfvFCcMjA1JKybli3sgJ0bck8t1MuBnvY97fzUcLoUJ75lO5i9itk7fTOFjRIHNf5w0ygWq1",
+    "layout_string":"gdIBQgW2VqdRqJ8N.Yf1QvrNSMFTeuExGfvFCcMjA1JKybli3sgJ0bck8t1MuBnvY97fzUcLoUJ75lO5i9itk7fTOFjRIHNf5w0ygWq1",
     "excluded_doors": [
         {
             "Alcove":["blue"],
@@ -81,7 +81,7 @@
             "Burn Dome":["blue"],
             "Burn Dome Access":["red","blue"],
             "Crossway":["blue","blue","blue"],
-            "Crossway Access South":["blue","purple"],
+            "Crossway Access South":["purple","blue"],
             "Crossway Access West":["purple","blue"],
             "Dynamo":["blue"],
             "Dynamo Access":["blue","blue"],
@@ -136,7 +136,7 @@
             "Transport to Tallon Overworld South":["blue"],
             "Vault":["blue","blue"],
             "Vault Access":["blue","red"],
-            "Watery Hall":["red","blue"],
+            "Watery Hall":["blue","blue"],
             "Watery Hall Access":["blue","blue"],
             "West Furnace Access":["blue","red"]
         },
@@ -269,7 +269,7 @@
             "Storage Depot B":["blue"],
             "Transport Access":["blue","blue"],
             "Transport to Magmoor Caverns South":["blue"],
-            "Transport to Tallon Overworld South":["blue"],
+            "Transport to Tallon Overworld South":["purple"],
             "Ventilation Shaft":["blue","blue"],
             "Waste Disposal":["blue","blue"]
         }
