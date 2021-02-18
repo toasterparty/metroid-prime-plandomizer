@@ -4,12 +4,13 @@ This is a collection of tools needed to make and play plandos for Metroid Prime.
 
 Designing seeds instead of using randomly chosen ones allows for finely tuned difficulty, reduces back-tracking and can often provide gameplay experiences you wouldn't ever natrually encounter in a logic-based randomizer. As people make plandos, I'll add them to the repository under the `/plandos` directory.
 
-I didn't implement any of the ISO patching aspects of this project (you can thank Syncathetic and Yonic for that). I just made all the tools play nicely together and proved it works.
+Eventually this project will be merged upstream so that it can be used with, Bash's GUI. In the meantime, please feel free to use in it's in-dev state.
 
 # Features
 - Settable items/locations
 - Settable elevator desitnations
 - Settable door colors
+    - Custom door colors
 - All the randomizer bells and whistles you're used to (frigate skip, item pickup message skip, 0-12 required artifacts etc...)
 
 # How to Play a Plando
@@ -18,6 +19,7 @@ I didn't implement any of the ISO patching aspects of this project (you can than
 3. Copy the `world_layout.json` file of the plando you wish to play into the root directory
 4. Run `patch.bat` (or `patch.sh` on linux) and wait for patching to complete
 5. Load `prime_out.iso` into your Dolphin, Wii, TI-84 etc. You are ready to play!
+6. Note that as you play, you may encounter non-vanilla doors types. Click [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/doors/readme.md) to view a list of all the new door types and their vulnerabilities.
 
 # How to Make a Plando
 1. Make a copy of `/plandos/_template/world_layout.json` and open in a text editor. This file contains a preset for all vanilla item locations, elevator destinations and door colors.
@@ -86,14 +88,25 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 - `"white"` - Ice Beam
 - `"red"` - Plasma Beam
 - `"default"` - The door will be unpatched (remain vanilla color for that location)
-- `"random"` - The door's color will be randomly chosen using the provided `"seed"` value and the provided `"door_weights"`.
+- `"missile"` - Missile door (different than a missile lock)
+- `"bomb"` - Morph Ball Bombs
+- `"charge"` - Charge Beam
+- `"power_bomb"` - Power Bombs
+- `"super"` - Super Missile
+- `"wavebuster"` - Wave Beam Charge Combo
+- `"icespreader"` - Ice Beam Charge Combo
+- `"flamethrower"` - Plasma Beam Charge Combo
+- `"disabled"` - Nothing opens this door (Technically Phazon beam can open if you can find a way to hack it in)
+- `"random"` - The door's color will be randomly chosen using the provided `"seed"` value and the provided `"door_weights"` (does not pick from custom door types).
 
-Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door use the annotated game maps provided [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/maps/readme.md), or in the `maps` directory. For example if a room's doors are `["blue","white","red"]`, then door:0 will be blue, door:1 will be white and door:2 would be red on the map.
+Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door use the annotated game maps provided [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/maps/readme.md), or in the `maps` directory. For example if a room's doors are `["blue","white","red"]`, then door:0 will be blue, door:1 will be white and door:2 would be red on the map.
 
 5. Set the item layout, elevator layout and starting room by providing a custom `"layout_string"`. The best way to make a layout string is using [Syncathetic's web tool](https://aprilwade.github.io/randomprime/editor.html). Note that you can paste in an existing layout string to parse and edit it, as opposed to having to start from scratch each time you open the web page. Note that you can place as many artifacts into the world as you would like, including 0. The artifact temple will open when no artifacts remain to be collected.
 
 # Known Issues
-- Doors that connect rooms vertically (like under the statue in Hall of the Elders) cannot be changed from their default color.
+- Doors that connect rooms vertically (like under the statue in Hall of the Elders) cannot be changed from their default color
+- Randomly picked doors cannot be custom door types
+- No completion logic for randomly picked doors
 
 # Build
 
