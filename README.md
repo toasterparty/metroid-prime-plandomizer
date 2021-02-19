@@ -84,11 +84,11 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 - `powerbomb_lockpick` - Set to `true` to make all doors vulnerable to power bombs.
 
 4. Under `"excluded_doors"`, you will see all of the rooms names in the games. Set each door's colors in each room as desired by changing each of the options to any of the following:
+- `"default"` - The door will be unpatched (remain vanilla color for that location)
 - `"blue"` - Any Beam
 - `"purple"` - Wave Beam
 - `"white"` - Ice Beam
 - `"red"` - Plasma Beam
-- `"default"` - The door will be unpatched (remain vanilla color for that location)
 - `"missile"` - Missile door (different than a missile lock)
 - `"bomb"` - Morph Ball Bombs
 - `"charge"` - Charge Beam
@@ -97,6 +97,7 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 - `"wavebuster"` - Wave Beam Charge Combo
 - `"icespreader"` - Ice Beam Charge Combo
 - `"flamethrower"` - Plasma Beam Charge Combo
+- `"ai"` - Only opens from enemy weapon fire
 - `"disabled"` - Nothing opens this door (Technically Phazon beam can open if you can find a way to hack it in)
 - `"random"` - The door's color will be randomly chosen using the provided `"seed"` value and the provided `"door_weights"` (does not pick from custom door types).
 
