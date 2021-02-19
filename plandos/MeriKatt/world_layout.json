@@ -17,7 +17,8 @@
         "stagger_suit_damage":false,
         "varia_heat_protection":true,
         "artifact_hints": "all",
-        "auto_enabled_elevators": false
+        "auto_enabled_elevators": false,
+        "patch_vertical_to_blue":false
     },
      
     "door_weights": {
