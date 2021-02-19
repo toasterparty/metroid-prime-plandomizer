@@ -10,7 +10,7 @@ Eventually this project will be merged upstream so that it can be used with, Bas
 - Settable items/locations
 - Settable elevator desitnations
 - Settable door colors
-    - Custom door colors
+    - 10 extra door colors
 - All the randomizer bells and whistles you're used to (frigate skip, item pickup message skip, 0-12 required artifacts etc...)
 
 # How to Play a Plando
@@ -73,7 +73,7 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 1048594
 ```
 
-...and so you would use `"starting_pickups":1048594`. Note that this means the player literally start with *9/9 missiles* not *9 missile packs*.
+...and so you would use `"starting_pickups":1048594`. Note that this means the player literally start with *9/9 missiles* not *9 missile packs*. For testing purposes, you can use to `"starting_pickups":68719476735` to start with every item in the game.
 
 3. Set your `patch_settings` as desired. Most are self-explainitory booleans (`true`/`false`), but here's some notable ones:
 - `patch_vertical_to_blue` - Set to `true` to make all doors that connect rooms vertically (e.g. Tower Chamber/Tower of Light) blue. Set to `false` to leave them as vanilla colors. Note that those are your only two options for vertical doors, you cannot set custom door colors on vertical doors.
