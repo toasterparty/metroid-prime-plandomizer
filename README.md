@@ -106,7 +106,7 @@ Note that doors are represented as an array of door for each room starting with 
 5. Set the item layout, elevator layout and starting room by providing a custom `"layout_string"`. The best way to make a layout string is using [Syncathetic's web tool](https://aprilwade.github.io/randomprime/editor.html). Note that you can paste in an existing layout string to parse and edit it, as opposed to having to start from scratch each time you open the web page. Note that you can place as many artifacts into the world as you would like, including 0. The artifact temple will open when no artifacts remain to be collected.
 
 # Known Issues
-- Doors that connect rooms vertically must either be all blue, or all vanilla colors. If patched to blue, the map will (incorrectly) display the orignal color.
+- Doors that connect rooms vertically must either be all blue, or all vanilla colors. If patched to blue, the map will (incorrectly) display the original color.
 - Main plaza ledge door will always be blue
 - Randomly picked doors cannot be custom door types
 - No completion logic for randomly picked doors
