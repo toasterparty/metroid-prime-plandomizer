@@ -2,13 +2,13 @@
 
 This is a collection of tools needed to make and play plandos for Metroid Prime. What is a plando you ask? It's a portemanteau of "planned" and "randomizer", or a non-vanilla item/elevator/door configuration to be played through using sequence-breaks. It's also technically an oxymoron.
 
-Designing seeds instead of using randomly chosen ones allows for finely tuned difficulty, reduces back-tracking and can often provide gameplay experiences you wouldn't ever natrually encounter in a logic-based randomizer. As people make plandos, I'll add them to the repository under the `/plandos` directory.
+Designing seeds instead of using randomly chosen ones allows for finely tuned difficulty, reduces back-tracking and can often provide gameplay experiences you wouldn't ever naturally encounter in a logic-based randomizer. As people make plandos, I'll add them to the repository under the `/plandos/` directory.
 
 Eventually this project will be merged upstream so that it can be used with, Bash's GUI. In the meantime, please feel free to use in it's in-dev state.
 
 # Features
 - Settable items/locations
-- Settable elevator desitnations
+- Settable elevator destinations
 - Settable door colors
     - 10 extra door colors
 - All the randomizer bells and whistles you're used to (frigate skip, item pickup message skip, 0-12 required artifacts etc...)
@@ -75,11 +75,11 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 
 ...and so you would use `"starting_pickups":1048594`. Note that this means the player literally start with *9/9 missiles* not *9 missile packs*. For testing purposes, you can use `"starting_pickups":68719476735` to start with every item in the game.
 
-3. Set your `patch_settings` as desired. Most are self-explainitory booleans (`true`/`false`), but here's some notable ones:
+3. Set your `patch_settings` as desired. Most are self-explanatory booleans (`true`/`false`), but here's some notable ones:
 - `patch_vertical_to_blue` - Set to `true` to make all doors that connect rooms vertically (e.g. Tower Chamber/Tower of Light) blue. Set to `false` to leave them as vanilla colors. Note that those are your only two options for vertical doors, you cannot set custom door colors on vertical doors.
 - `skip_hudmemos` - Set to `true` to skip the message that pops up when you pick up an item.
 - `enable_one_way_doors` - Set to `true` if you want to be able to get to vault from the main plaza ledge
-- `artifact_hints` - `"all"` means the artifact temple will show hints for all artifacts in play from the beggining. `none` means that you never get any hints. `"default"` means that it works like it does in the vanilla game.
+- `artifact_hints` - `"all"` means the artifact temple will show hints for all artifacts in play from the beginning. `none` means that you never get any hints. `"default"` means that it works like it does in the vanilla game.
 - `varia_heat_protection` - Set to `true` to make it so that only varia gives heat protection. Set to `false` for vanilla behavior (all 3 suits give heat protection).
 - `powerbomb_lockpick` - Set to `true` to make all doors vulnerable to power bombs.
 
