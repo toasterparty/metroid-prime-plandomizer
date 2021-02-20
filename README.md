@@ -76,12 +76,11 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 ...and so you would use `"starting_pickups":1048594`. Note that this means the player literally start with *9/9 missiles* not *9 missile packs*. For testing purposes, you can use `"starting_pickups":68719476735` to start with every item in the game.
 
 3. Set your `patch_settings` as desired. Most are self-explanatory booleans (`true`/`false`), but here's some notable ones:
-- `patch_vertical_to_blue` - Set to `true` to make all doors that connect rooms vertically (e.g. Tower Chamber/Tower of Light) blue. Set to `false` to leave them as vanilla colors. Note that those are your only two options for vertical doors, you cannot set custom door colors on vertical doors.
-- `skip_hudmemos` - Set to `true` to skip the message that pops up when you pick up an item.
+- `skip_hudmemos` - Set to `true` to skip the message that pops up when you pick up an item
 - `enable_one_way_doors` - Set to `true` if you want to be able to get to vault from the main plaza ledge
-- `artifact_hints` - `"all"` means the artifact temple will show hints for all artifacts in play from the beginning. `none` means that you never get any hints. `"default"` means that it works like it does in the vanilla game.
+- `artifact_hints` - `"all"` means the artifact temple will show hints for all artifacts in play from the beginning. `"none"` means that you never get any hints. `"default"` means that it works like it does in the vanilla game
 - `varia_heat_protection` - Set to `true` to make it so that only varia gives heat protection. Set to `false` for vanilla behavior (all 3 suits give heat protection).
-- `powerbomb_lockpick` - Set to `true` to make all doors vulnerable to power bombs.
+- `powerbomb_lockpick` - Set to `true` to make all doors vulnerable to power bombs
 
 4. Under `"excluded_doors"`, you will see all of the rooms names in the games. Set each door's colors in each room as desired by changing each of the options to any of the following:
 - `"default"` - The door will be unpatched (remain vanilla color for that location)
@@ -101,12 +100,12 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 - `"disabled"` - Nothing opens this door (Technically Phazon beam can open if you can find a way to hack it in)
 - `"random"` - The door's color will be randomly chosen using the provided `"seed"` value and the provided `"door_weights"` (does not pick from custom door types).
 
-Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door use the annotated game maps provided [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/maps/readme.md), or in the `/doc/maps` directory. For example if a room's doors are `["blue","white","red"]`, then door:0 will be blue, door:1 will be white and door:2 would be red on the map. Also note the location of vertical doors on the map. These cannot be changed apart from setting the `patch_vertical_to_blue` option to `true`.
+Note that doors are represented as an array of door for each room starting with index 0, 1, 2 etc... To figure out what index in the room array a specific door use the annotated game maps provided [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/maps/readme.md), or in the `/doc/maps` directory. For example if a room's doors are `["blue","white","red"]`, then door:0 will be blue, door:1 will be white and door:2 would be red on the map.
 
 5. Set the item layout, elevator layout and starting room by providing a custom `"layout_string"`. The best way to make a layout string is using [Syncathetic's web tool](https://aprilwade.github.io/randomprime/editor.html). Note that you can paste in an existing layout string to parse and edit it, as opposed to having to start from scratch each time you open the web page. Note that you can place as many artifacts into the world as you would like, including 0. The artifact temple will open when no artifacts remain to be collected.
 
 # Known Issues
-- Doors that connect rooms vertically must either be all blue, or all vanilla colors. If patched to blue, the map will (incorrectly) display the original color.
+- Vertical doors will always show their vanilla color on the map
 - Main plaza ledge door will always be blue
 - Randomly picked doors cannot be custom door types
 - No completion logic for randomly picked doors
