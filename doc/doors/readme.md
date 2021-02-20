@@ -26,7 +26,7 @@ Plandomizers can make use of 10 non-vanilla door types. These are designated on 
 ![](Flamethrower.png)
 
 ## Enemy Door
-This door only opens to AI weapons, so you'll have to bait enemies to shoot the door for you. It definitely works with Bloodflowers, Chozo Ghosts and Space Pirates. There may be more, but you'll have to get creative to find them. The door frame is made out of a T-posing Chozo Ghost to help you remember what this door means.
+This door only opens to AI weapons, so you'll have to bait enemies to shoot the door for you. It definitely works with Bloodflowers, Chozo Ghosts and Space Pirates. There may be more, but you'll have to get creative to find them.
 
 ![](EnemyDoor.png)
 
