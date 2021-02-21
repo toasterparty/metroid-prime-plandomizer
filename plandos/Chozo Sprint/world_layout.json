@@ -29,6 +29,32 @@
     "layout_string":"wqrq_rwu-r6-pb_BDvTGjO4VwOixDmiisIjq05Ng_OJB0LNyOtQI3VHs04-Da5yuTYXYK5ExpzU9W1dWfWd9WX1",
     "excluded_doors": [
         {
+            "Air Lock":["default","default"],
+            "Biohazard Containment":["default","default"],
+            "Biotech Research Area 1":["default","default"],
+            "Biotech Research Area 2":["unused","default"],
+            "Cargo Freight Lift to Deck Gamma":["default","default"],
+            "Connection Elevator to Deck Beta":["default","default"],
+            "Deck Alpha Access Hall":["default","default"],
+            "Deck Alpha Umbilical Hall":["default","default"],
+            "Deck Beta Conduit Hall":["default","default"],
+            "Deck Beta Security Hall":["default","default"],
+            "Deck Beta Transit Hall":["default","default"],
+            "Deck Gamma Monitor Hall":["unused","default"],
+            "Emergency Evacuation Area":["default","default"],
+            "Exterior Docking Hangar":["default"],
+            "Main Ventilation Shaft Section A":["unused","default"],
+            "Main Ventilation Shaft Section B":["unused","default"],
+            "Main Ventilation Shaft Section C":["default"],
+            "Main Ventilation Shaft Section D":["unused","default"],
+            "Main Ventilation Shaft Section E":["default"],
+            "Main Ventilation Shaft Section F":["default"],
+            "Map Facility":["default","default"],
+            "Reactor Core Entrance":["default","default","default"],
+            "Reactor Core":["unused","default"],
+            "Subventilation Shaft Section A":["unused","default"]
+        },
+        {
             "Alcove":["blue"],
             "Arbor Chamber":["blue"],
             "Artifact Temple":["blue"],
@@ -272,6 +298,14 @@
             "Transport to Tallon Overworld South":["default"],
             "Ventilation Shaft":["default","default"],
             "Waste Disposal":["default","default"]
+        },
+        {
+            "Crater Entry Point":["default"],
+            "Crater Missile Station":["default"],
+            "Crater Tunnel A":["default","default"],
+            "Crater Tunnel B":["default","default"],
+            "Phazon Core":["default","default","default"],
+            "Phazon Infusion Chamber":["default","default"]
         }
     ]
 }
