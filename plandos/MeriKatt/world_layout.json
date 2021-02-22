@@ -4,6 +4,7 @@
     "mpdrp_version": 3,
     "seed":555,
     "starting_pickups":1,
+    "starting_pickups_frigate":2188378143,
     "patch_settings": {
         "enable_one_way_doors":true,
         "fix_flaaghra_music":false,
