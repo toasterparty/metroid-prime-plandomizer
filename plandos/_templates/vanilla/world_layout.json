@@ -3,7 +3,10 @@
     "output_iso": "prime_out.iso",
     "mpdrp_version": 3,
     "seed":555,
-    "starting_pickups":1,
+    "new_save_starting_items":1,
+    "frigate_done_starting_items":0,
+    "new_save_spawn_room":"Tallon:Landing Site",
+    "frigate_done_spawn_room":"Tallon:Landing Site",
     "patch_settings":{
         "enable_one_way_doors":false,
         "fix_flaaghra_music":false,
@@ -17,8 +20,15 @@
         "stagger_suit_damage":false,
         "varia_heat_protection":false,
         "artifact_hints":"all",
-        "auto_enabled_elevators":false
+        "auto_enabled_elevators":false,
+        "patch_power_conduits":false,
+        "remove_missile_locks":false,
+        "remove_frigidite_lock":false,
+        "remove_mine_security_station_locks":false,
+        "tiny_elvetator_samus":false
     },
+    "layout_string":"NCiq7nTAtTnqPcap9VMQk_o8Qj6ZjbPiOdYDB5tgtwL_f01-UpYklNGnL-gTu5IeVW3IoUiflH5LqNXB3wVEER4",
+    "superheated_rooms":[],
     "door_weights": {
         "chozo_ruins":[25,25,25,25],
         "magmoor_caverns":[25,25,25,25],
@@ -26,7 +36,6 @@
         "phendrana_drifts":[25,25,25,25],
         "tallon_overworld":[25,25,25,25]
     },
-    "layout_string":"NCiq7nTAtTnqPcap9VMQk_o8Qj6ZjbPiOdYDB5tgtwL_f01-UpYklNGnL-gTu5IeVW3IoUiflH5LqNXB3wVEER4",
     "excluded_doors": [
         {
             "Air Lock":["default","default"],

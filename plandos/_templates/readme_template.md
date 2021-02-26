@@ -22,5 +22,3 @@
   <summary>Example Spoiler</summary>
     Example spoiler text
 </details>
-
-
