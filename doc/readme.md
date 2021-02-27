@@ -153,7 +153,13 @@ Using the above web tool, place the desired items at each location and set the d
 The web tool only allows for other elevators to be used as destinations. If you would like to use other specific rooms as elevator destinations, see [missile_locks.md](https://github.com/blakespangenberg/metroid-prime-plandomizer/tree/main/doc/elevator_overrides.md) for details.
 
 ## 8 - Superheated rooms
+The property `"superheated_rooms"` lets you set any room in the game to do constant heat damage without Varia Suit. It's formatted as an array of room names using the format defined in section `2 - Room Name Format`. For example:
 
+```
+"superheated_rooms":["Chozo:Main Plaza", "Tallon:Landing Site"],
+```
+
+Will make Main Plaza and Landing Site deal heat damage in addition to the vanilla magmoor/magma_pool rooms.
 
 # Playtesting
 Here are some useful tips for playtesting:
