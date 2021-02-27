@@ -26,10 +26,14 @@ Eventually this project will be merged upstream so that it can be used with, Bas
 3. Copy the `world_layout.json` file of the plando you wish to play into the root directory
 4. Run `patch.bat` (or `patch.sh` on linux) and wait for patching to complete
 5. Load the output iso file into your Dolphin, Wii, TI-84 etc. You are ready to play!
-6. Note that as you play, you may encounter non-vanilla doors types. Click [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/doors/readme.md) to view a list of all the new door types and their vulnerabilities.
+6. Note that as you play, you may encounter non-vanilla doors types. Click [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/doors/readme.md) to view a list of all the new door types and their vulnerabilities. Additionally, you should keep in mind that the following options are availible to plando-makers:
+- Power Conduits activated by all weapons
+- Remove Missile Locks
+- Remove Door Locks in Mine Security Station
+- Remove Frigidite in Elite Quarters Access
 
 # How to Make a Plando
-Read the guide [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/tree/main/doc/readme.md)
+[Read the guide here](https://github.com/blakespangenberg/metroid-prime-plandomizer/tree/main/doc/readme.md)
 
 # Known Issues
 *This has only ever been tested on NTSC v1.0. There may be additional issues with non NTSC v1.0 versions*

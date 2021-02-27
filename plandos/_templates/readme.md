@@ -6,20 +6,20 @@ A tempalte readme file that you can use to describe your plando. At minumum, you
 
 ## vanilla
 The vanilla game, but with:
-    - Frigate skipped
-    - Item pickup messages skipped
-    - All artifact hints availible immediately upon entering temple
+- Frigate skipped
+- Item pickup messages skipped
+- All artifact hints availible immediately upon entering temple
 
 ## all-open
 With this layout you are able to visit every room without the 3 beam pickups. In other words:
-    - All doors are blue
-    - Power conduits activate with power beam
-    - Missile Locks are removed 
-    - The frigidite lock blocking access to Omega Pirate is removed
-    - The locks placed by Wave Beam Troopers in mines security station are removed
+- All doors are blue
+- Power conduits activate with power beam
+- Missile Locks are removed 
+- The frigidite lock blocking access to Omega Pirate is removed
+- The locks placed by Wave Beam Troopers in mines security station are removed
 
 ## all-closed
 If you really want to start from scratch, you can use this template in which:
-    - All doors are disabled
-    - All items "nothing" items
-    - All elevators lead to artifact temple
+- All doors are disabled
+- All items "nothing" items
+- All elevators lead to artifact temple
