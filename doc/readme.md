@@ -42,7 +42,7 @@ In the `"patch_settings"` section of the json file, you will noticed the below s
 - `powerbomb_lockpick` - Set to `true` to be able to open any door with a power bomb
 - `skip_crater` - Set to `true` to make any elevator that leads to impact crater actually take you to the credits.
 - `skip_frigate` - Set to `true` to skip the frigate. Note that setting `false` removes the frigate from the game completely, so do not send any elevators to the frigate if you do this.
-- `skip_hudmemo` - Set to `true` to skip the item aquisition popup message
+- `skip_hudmemo` - Set to `true` to skip the item acquisition popup message
 - `obfuscate_items` - Set to `true` to hide the identity of all items until they are physically obtained
 - `stagger_suit_damage` - Set to `true` to make damage resistance a function of how many suits  you have instead of Phazon suit just making you a beast.
 - `varia_heat_protection` - Set to `true` to make it so that only varia gives heat protection. Set to `false` for vanilla behavior (all 3 suits give heat protection).
@@ -115,7 +115,7 @@ Then, simply sum the numbers together. For example, if the starting items are ch
 
 There are two configuration options which take a starting items number:
 - `new_save_starting_items` - The items the player spawns with after starting a new save file
-- `frigate_done_starting_items` - The items the player spawns with after finishing the frigate and landing at landing site. This is unused if either the firgate is skipped, or the TallonIV spawn room isn't landing site.
+- `frigate_done_starting_items` - The items the player spawns with after finishing the frigate and landing at landing site. This is unused if either the Frigate is skipped, or the TallonIV spawn room isn't landing site.
 
 ## 6 - Door Layout
 

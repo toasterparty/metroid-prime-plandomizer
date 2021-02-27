@@ -26,7 +26,7 @@ Eventually this project will be merged upstream so that it can be used with, Bas
 3. Copy the `world_layout.json` file of the plando you wish to play into the root directory
 4. Run `patch.bat` (or `patch.sh` on linux) and wait for patching to complete
 5. Load the output iso file into your Dolphin, Wii, TI-84 etc. You are ready to play!
-6. Note that as you play, you may encounter non-vanilla doors types. Click [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/doors/readme.md) to view a list of all the new door types and their vulnerabilities. Additionally, you should keep in mind that the following options are availible to plando-makers:
+6. Note that as you play, you may encounter non-vanilla doors types. Click [here](https://github.com/blakespangenberg/metroid-prime-plandomizer/blob/main/doc/doors/readme.md) to view a list of all the new door types and their vulnerabilities. Additionally, you should keep in mind that the following options are available to plando-makers:
 - Power Conduits activated by all weapons
 - Remove Missile Locks
 - Remove Door Locks in Mine Security Station
@@ -47,8 +47,7 @@ Eventually this project will be merged upstream so that it can be used with, Bas
     - Players can keep a single beam through the frigate item loss cutscene by having it equipped when the frigate collapse cutscene starts. They can keep the beam for as long as they don't switch back to power beam. For this exact reason "power_only" doors were added to the plandomizer, to force players to switch to power beam.
 - There's two rooms with the same name in Frigate. They both get patched with the doors specified in layout.
 - If the frigate is accessible after landing on the planet, the starting items given to the player after finishing the level are only given if the destination is landing site
-- Under certain conditions, samus' ship in landing site can be invisible - You can still save and do SJF though
-
+- Under certain conditions, Samus' ship in landing site can be invisible - You can still save and do SJF though
 
 # Build
 
