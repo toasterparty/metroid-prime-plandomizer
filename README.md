@@ -47,7 +47,6 @@ Eventually this project will be merged upstream so that it can be used with, Bas
     - Players can keep a single beam through the frigate item loss cutscene by having it equipped when the frigate collapse cutscene starts. They can keep the beam for as long as they don't switch back to power beam. For this exact reason "power_only" doors were added to the plandomizer, to force players to switch to power beam.
 - There's two rooms with the same name in Frigate. They both get patched with the doors specified in layout.
 - If the frigate is accessible after landing on the planet, the starting items given to the player after finishing the level are only given if the destination is landing site
-- Under certain conditions, Samus' ship in landing site can be invisible - You can still save and do SJF though
 
 # Build
 
