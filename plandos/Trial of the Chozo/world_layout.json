@@ -1,10 +1,9 @@
 {
     "input_iso": "prime.iso",
-    "output_iso": "prime_out.iso",
+    "output_iso": "Trial_of_the_Chozo.iso",
     "mpdrp_version": 3,
     "seed":555,
     "starting_pickups":1048577,
-    "starting_pickups_frigate":2188378143,
     "patch_settings":{
         "enable_one_way_doors":true,
         "fix_flaaghra_music":false,
@@ -28,33 +27,7 @@
         "tallon_overworld":[25,25,25,25]
     },
     "layout_string":"gdIBQgW2VqdRqJ8N.Yf1QvrNSMFTeuExGfvFCcMjA1JKybli3sgJ0bck8t1MuBnvY97fzUcLoUJ75lO5i9itk7fTOFjRIHNf5w0ygWq1",
-     "excluded_doors": [
-        {
-            "Air Lock":["default","default"],
-            "Biohazard Containment":["default","default"],
-            "Biotech Research Area 1":["default","default"],
-            "Biotech Research Area 2":["unused","default"],
-            "Cargo Freight Lift to Deck Gamma":["default","default"],
-            "Connection Elevator to Deck Beta":["default","default"],
-            "Deck Alpha Access Hall":["default","default"],
-            "Deck Alpha Umbilical Hall":["default","default"],
-            "Deck Beta Conduit Hall":["default","default"],
-            "Deck Beta Security Hall":["default","default"],
-            "Deck Beta Transit Hall":["default","default"],
-            "Deck Gamma Monitor Hall":["unused","default"],
-            "Emergency Evacuation Area":["default","default"],
-            "Exterior Docking Hangar":["default"],
-            "Main Ventilation Shaft Section A":["unused","default"],
-            "Main Ventilation Shaft Section B":["unused","default"],
-            "Main Ventilation Shaft Section C":["default"],
-            "Main Ventilation Shaft Section D":["unused","default"],
-            "Main Ventilation Shaft Section E":["default"],
-            "Main Ventilation Shaft Section F":["default"],
-            "Map Facility":["default","default"],
-            "Reactor Core Entrance":["default","default","default"],
-            "Reactor Core":["unused","default"],
-            "Subventilation Shaft Section A":["unused","default"]
-        },
+    "excluded_doors": [
         {
             "Air Lock":["default","default"],
             "Biohazard Containment":["default","default"],
@@ -158,7 +131,7 @@
             "Nursery Access":["blue","blue"],
             "Piston Hall":["blue","blue"],
             "Plaza Access":["blue","blue"],
-            "Reflecting Pool":["blue","White","blue","blue"],
+            "Reflecting Pool":["blue","blue","blue","blue"],
             "Reflecting Pool Access":["blue","blue"],
             "Ruined Fountain":["blue","blue","blue"],
             "Ruined Fountain Access":["blue","blue"],
@@ -259,10 +232,10 @@
             "Quarantine Cave":["blue","blue","blue"],
             "Quarantine Monitor":["blue"],
             "Research Core":["blue","blue"],
-            "Research Core Access":["blue","blue"],
+            "Research Core Access":["blue","purple"],
             "Research Entrance":["blue","blue","blue"],
             "Research Lab Aether":["blue","blue"],
-            "Research Lab Hydra":["blue","blue"],
+            "Research Lab Hydra":["blue","purple"],
             "Ruined Courtyard":["blue","blue","blue","blue"],
             "Ruins Entryway":["blue","blue"],
             "Save Station A":["blue"],
@@ -289,11 +262,11 @@
             "Elevator Access A":["blue","blue"],
             "Elevator Access B":["blue","blue"],
             "Elevator B":["blue","blue"],
-            "Elite Control":["blue","blue","blue"],
+            "Elite Control":["blue","blue","white"],
             "Elite Control Access":["blue","blue"],
             "Elite Quarters":["blue","blue"],
             "Elite Quarters Access":["blue","blue"],
-            "Elite Research":["blue","blue"],
+            "Elite Research":["blue","white"],
             "Fungal Hall A":["blue","blue"],
             "Fungal Hall Access":["blue","blue"],
             "Fungal Hall B":["blue","blue","blue"],
@@ -302,7 +275,7 @@
             "Map Station Mines":["blue"],
             "Metroid Quarantine A":["blue","blue"],
             "Metroid Quarantine B":["blue","red","blue"],
-            "Mine Security Station":["blue","blue","blue"],
+            "Mine Security Station":["blue","purple","blue"],
             "Missile Station Mines":["blue"],
             "Omega Research":["blue","blue","blue"],
             "Ore Processing":["blue","blue","blue","blue"],
@@ -317,7 +290,7 @@
             "Save Station Mines B":["blue"],
             "Save Station Mines C":["blue"],
             "Security Access A":["blue","blue"],
-            "Security Access B":["blue","red"],
+            "Security Access B":["white","purple"],
             "Storage Depot A":["blue"],
             "Storage Depot B":["blue"],
             "Transport Access":["blue","blue"],
@@ -333,15 +306,6 @@
             "Crater Tunnel B":["default","default"],
             "Phazon Core":["default","default","default"],
             "Phazon Infusion Chamber":["default","default"]
-        },
-        {
-            "Crater Entry Point":["default"],
-            "Crater Missile Station":["default"],
-            "Crater Tunnel A":["default","default"],
-            "Crater Tunnel B":["default","default"],
-            "Phazon Core":["default","default","default"],
-            "Phazon Infusion Chamber":["default","default"]
         }
     ]
 }
-
