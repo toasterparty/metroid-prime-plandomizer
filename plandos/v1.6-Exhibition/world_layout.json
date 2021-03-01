@@ -1,11 +1,11 @@
 {
     "input_iso": "prime.iso",
-    "output_iso": "prime_out.iso",
+    "output_iso": "v1.6-Exhibition.iso",
     "mpdrp_version": 3,
     "seed":555,
-    "new_save_starting_items":4935717002,
+    "new_save_starting_items":640749706,
     "frigate_done_starting_items":0,
-    "new_save_spawn_room":"Mines:Elite Quarters Access",
+    "new_save_spawn_room":"Mines:Processing Center Access",
     "frigate_done_spawn_room":"Tallon:Alcove",
     "patch_settings":{
         "enable_one_way_doors":true,
@@ -27,7 +27,7 @@
         "remove_mine_security_station_locks":true,
         "tiny_elvetator_samus":true
     },
-    "layout_string":"!FxAHgyr_BD82EIvid_jC0IkHw_Z_or5_71tfDTBWTWKloY7uozTDnoQakZ6EF0570KrOcYlSBldBhi4XHs-k1mA",
+    "layout_string":"!t7KFKvr1Dh2ekKyiXXLC0IkHw_Z_or5_71tfDTBWTWKloY7uozTDnoQakZ6EF0570K7PMNhXRkcQ029DTswhkjA",
     "superheated_rooms":["Chozo:Main Plaza", "Chozo:Reflecting Pool"],
     "missile_lock_override":[true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
     "elevator_layout_override":[
@@ -297,7 +297,7 @@
             "Elite Control":["blue","red","bomb"],
             "Elite Control Access":["blue","blue"],
             "Elite Quarters":["blue","blue"],
-            "Elite Quarters Access":["ice","missile"],
+            "Elite Quarters Access":["blue","blue"],
             "Elite Research":["blue","bomb"],
             "Fungal Hall A":["blue","blue"],
             "Fungal Hall Access":["blue","disabled"],
