@@ -153,7 +153,7 @@ Using the above web tool, place the desired items at each location and set the d
 ### Elevator Overrides
 The web tool only allows for other elevators to be used as destinations. If you would like to use other specific rooms as elevator destinations, see [missile_locks.md](https://github.com/blakespangenberg/metroid-prime-plandomizer/tree/main/doc/elevator_overrides.md) for details.
 
-## 8 - Superheated rooms
+## 8 - Superheated Rooms
 The property `"superheated_rooms"` lets you set any room in the game to do constant heat damage without Varia Suit. It's formatted as an array of room names using the format defined in section `2 - Room Name Format`. For example:
 
 ```
@@ -161,6 +161,15 @@ The property `"superheated_rooms"` lets you set any room in the game to do const
 ```
 
 Will make Main Plaza and Landing Site deal heat damage in addition to the vanilla magmoor/magma_pool rooms.
+
+## 9 - Drain Water from Rooms
+Much like section `8 - Superheated Rooms`, a list of rooms can be specifed with `"drain_liquid_rooms"` to specify any room in the game to remove all liquds from. This stil leaves certain effects behind such as bubbles, fish, lava popping, etc. For example:
+
+```
+"drain_liquid_rooms":["Chozo:Magma Pool", "Tallon:Frigate Crash Site"],
+```
+
+Would drain all the lava and water in those two rooms.
 
 # Playtesting
 Here are some useful tips for playtesting:

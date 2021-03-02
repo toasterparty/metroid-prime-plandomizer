@@ -14,6 +14,7 @@ Eventually this project will be merged upstream so that it can be used with, Bas
 - Choose which rooms are superheated
 - Spawn in any room
 - Map elevators to any room
+- Remove water/lava/acid from any room
 - Other patch settings to help open up the world such as:
     - Power beam activated power conduits
     - Remove frigidite above door in Elite Quarters Access
