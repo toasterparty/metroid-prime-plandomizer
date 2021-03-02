@@ -52,6 +52,7 @@ In the `"patch_settings"` section of the json file, you will noticed the below s
 - `remove_missile_locks` - Set to `true` to remove all missile locks from the game. If you only want to remove specific locks, see [missile_locks.md](https://github.com/blakespangenberg/metroid-prime-plandomizer/tree/main/doc/missile_locks.md) for details.
 - `remove_frigidite_lock` - Set to `true` to remove the ice stopping you from getting into Omega Pirate's room without plasma beam
 - `remove_mine_security_station_locks` - Set to `true` to let the player pass though Mine Security Station without killing all the Wave Troopers
+- `lower_mines_backwards` - Set to `true` to remove various forcefields in lower mines to allow the player to traverse it backwards
 - `tiny_elvetator_samus` - Set to `true` for a fun *little* gag when riding elevators
 
 ## 4 - Spawn Rooms
