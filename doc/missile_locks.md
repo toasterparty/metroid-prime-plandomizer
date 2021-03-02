@@ -30,5 +30,6 @@ Each `true`/`false` in this array represents a specific room in the game. If set
 19) Canyon Entryway 
 20) Ruined Courtyard
 21) Observatory
+22) Ruined Gallery
 
 For rooms that have 2 missile locks, it gets rid of both.
