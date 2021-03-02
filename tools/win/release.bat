@@ -1,6 +1,7 @@
 @echo off
 cd ../../randomprime
 cargo build
+pause
 cd ..
 echo Packaging release for windows...
 cd release
@@ -19,4 +20,3 @@ xcopy doc release\win\metroid-prime-plandomizer\doc /Y /E
 xcopy plandos release\win\metroid-prime-plandomizer\plandos /Y /E
 cd release\win
 tar.exe -a -c -f metroid-prime-plandomizer-vX.X-windows.zip metroid-prime-plandomizer
-pause
