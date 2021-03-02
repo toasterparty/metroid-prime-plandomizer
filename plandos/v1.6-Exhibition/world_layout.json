@@ -1,11 +1,11 @@
 {
     "input_iso": "prime.iso",
-    "output_iso": "v1.6-Exhibition.iso",
+    "output_iso": "v1.6_Exhibition.iso",
     "mpdrp_version": 3,
     "seed":555,
-    "new_save_starting_items":640749706,
+    "new_save_starting_items":4935717002,
     "frigate_done_starting_items":0,
-    "new_save_spawn_room":"Mines:Processing Center Access",
+    "new_save_spawn_room":"Mines:Elite Quarters Access",
     "frigate_done_spawn_room":"Tallon:Alcove",
     "patch_settings":{
         "enable_one_way_doors":true,
@@ -25,9 +25,10 @@
         "remove_missile_locks":true,
         "remove_frigidite_lock":true,
         "remove_mine_security_station_locks":true,
+        "lower_mines_backwards":true,
         "tiny_elvetator_samus":true
     },
-    "layout_string":"!t7KFKvr1Dh2ekKyiXXLC0IkHw_Z_or5_71tfDTBWTWKloY7uozTDnoQakZ6EF0570K7PMNhXRkcQ029DTswhkjA",
+    "layout_string":"!FTItAyp_BBUeOAyCX3ro0oMXWd1CvBqQJoQ3IqODWjIZMBF1i4jEcNwlJDPpKpt-lbwaJNkTAkNR1i4XSowgl2A",
     "superheated_rooms":["Chozo:Main Plaza", "Chozo:Reflecting Pool"],
     "missile_lock_override":[true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false],
     "elevator_layout_override":[
@@ -50,7 +51,7 @@
         "Tallon:Temple Hall",
         "Tallon:Temple Hall",
         "Tallon:Temple Hall",
-        "credits"
+        "Credits"
     ],
     "door_weights": {
         "chozo_ruins":[25,25,25,25],
@@ -297,7 +298,7 @@
             "Elite Control":["blue","red","bomb"],
             "Elite Control Access":["blue","blue"],
             "Elite Quarters":["blue","blue"],
-            "Elite Quarters Access":["blue","blue"],
+            "Elite Quarters Access":["ice","missile"],
             "Elite Research":["blue","bomb"],
             "Fungal Hall A":["blue","blue"],
             "Fungal Hall Access":["blue","disabled"],
