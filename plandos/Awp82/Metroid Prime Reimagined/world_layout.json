@@ -3,7 +3,8 @@
     "output_iso": "Metroid_Prime_Re-imagined.iso",
     "mpdrp_version": 3,
     "seed":555,
-    "starting_pickups":1,
+    "new_save_starting_items":2188378143,
+    "frigate_done_starting_items":1,
     "patch_settings":{
         "enable_one_way_doors":false,
         "fix_flaaghra_music":false,
