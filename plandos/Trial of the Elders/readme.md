@@ -20,11 +20,11 @@ This seed is a proof-of-concept for my the plandomizer. My goal when designing t
 - Exploit Standable Terrain
 - L/R-Jumps
 - Slope/Ghetto Jumps
-- Scan Dashes (Sorry PAL players...)
+- Scan Dashes
 - Boost Ball Shennanigans
 - Varialess Magmoor Run (VMR)
 - Infinite Speed (IS)
-- Double Bomb Jumps (DBJ)
+- Laddered Double Bomb Jumps (DBJ)
 - Intermediate/Advanced Wallcrawling
 
 ## Not Required
