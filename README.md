@@ -39,13 +39,8 @@ Eventually this project will be merged upstream so that it can be used with, Bas
 # Known Issues
 *This has only ever been tested on NTSC v1.0. There may be additional issues with non NTSC v1.0 versions*
 - Vertical doors will always show their vanilla color on the map
-- When using specific rooms as elevator destinations (or as spawn room), various strange things may occur. This includes:
-    - Spawning you in a different room than the one specified
-    - Spawning you out of bounds
-    - Loosing/gaining items
-    
-    If this happens, just pick a different room. For some reason, this happens with almost every frigate room.
-    - Players can keep a single beam through the frigate item loss cutscene by having it equipped when the frigate collapse cutscene starts. They can keep the beam for as long as they don't switch back to power beam. For this exact reason "power_only" doors were added to the plandomizer, to force players to switch to power beam.
+- There's a couple rooms in the game that will spawn you out of bounds when you use them as an elevator destination
+- Players can keep a single beam through the frigate item loss cutscene by having it equipped when the frigate collapse cutscene starts. They can keep the beam for as long as they don't switch back to power beam. For this exact reason "power_only" doors were added to the plandomizer, to force players to switch to power beam.
 - There's two rooms with the same name in Frigate. They both get patched with the doors specified in layout.
 - If the frigate is accessible after landing on the planet, the starting items given to the player after finishing the level are only given if the destination is landing site
 
