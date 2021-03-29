@@ -1,3 +1,6 @@
 [submodule "randomprime"]
 	path = randomprime
 	url = ../../blakespangenberg/randomprime.git
+[submodule "plandos/BashPrime"]
+	path = plandos/BashPrime
+	url = git@github.com:BashPrime/metroid-prime-plandomizer-layouts.git
