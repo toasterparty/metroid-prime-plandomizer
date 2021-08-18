@@ -25,10 +25,18 @@
         "remove_missile_locks":true,
         "remove_frigidite_lock":true,
         "remove_mine_security_station_locks":true,
-        "tiny_elvetator_samus":false
+        "tiny_elvetator_samus":false,
+        "remove_hall_of_the_elders_forcefield":false,
+        "quickplay":false
     },
     "layout_string":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "superheated_rooms":[],
+    "deheated_rooms":[],
+    "drain_liquid_rooms": [],
+    "underwater_rooms": [],
+    "liquid_volumes": [],
+    "aether_transforms": [],
+    "additional_items": [],
     "door_weights": {
         "chozo_ruins":[25,25,25,25],
         "magmoor_caverns":[25,25,25,25],
