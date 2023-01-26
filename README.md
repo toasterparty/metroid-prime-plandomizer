@@ -1,6 +1,6 @@
 ### *This project is discontinued has been superseded by [Metroid Prime Fan Hacks](https://github.com/toasterparty/metroid-prime-fanhacks)*
 
-*(Feel free to still enjoy the 19 plandos included in the final release)*
+*(Feel free to still enjoy the 18 plandos included in the final release)*
 
 Thank you to everyone who played or worked on a plando.
 
