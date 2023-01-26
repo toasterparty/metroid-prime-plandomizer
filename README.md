@@ -1,3 +1,9 @@
+### *This project is discontinued has been superseded by [Metroid Prime Fan Hacks](https://github.com/toasterparty/metroid-prime-fanhacks)*
+
+*(Feel free to still enjoy the 19 plandos included in the final release)*
+
+Thank you to everyone who played or worked on a plando.
+
 # Metroid Prime Plandomizer
 
 This is a collection of tools needed to make and play plandos for Metroid Prime. What is a plando you ask? It's a portemanteau of "planned" and "randomizer", or a non-vanilla item/elevator/door configuration to be played through using sequence-breaks. It's also technically an oxymoron.
