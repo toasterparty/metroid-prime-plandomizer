@@ -1,3 +1,5 @@
+# DO NOT READ THIS GUIDE INSTEAD GO HERE: [METROID-PRIME-FANHACKS](https://github.com/toasterparty/metroid-prime-fanhacks)
+
 # Plando Creation Guide
 This guide will walk you through how to make your own plando. If you still have questions after reading this, feel free to reach out to me on discord (toasterparty#9244). This guide was written specifically for v1.6, so there may be differences if you aren't using this version.
 
